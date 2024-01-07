@@ -43,7 +43,7 @@ class Manu(qtw.QMainWindow):
 
     def WindowOne(self):
         # give size and shape to the first window
-        self.Window1.setGeometry(10, 10, 905, 460)
+        self.Window1.setGeometry(20, 20, 905, 430)
         # self.Window1.setMaximumSize(600, 500)
         # self.Window1.setMinimumSize(600, 500)
         self.Window1.setStyleSheet("""
@@ -97,7 +97,7 @@ class Manu(qtw.QMainWindow):
         self.MainLayoutOfWindowOne.addWidget(self.Oyna1OfW1)
         
         self.Oyna2OfW1 = qtw.QWidget()
-        self.Oyna2OfW1.setStyleSheet("background-color: white")
+        self.Oyna2OfW1.setStyleSheet("background-color: pink")
 
         # set a layput in the window of the mains of the first layout
         self.LaytOfMeansOfL1W1 = qtw.QHBoxLayout()
@@ -111,9 +111,9 @@ class Manu(qtw.QMainWindow):
         self.LaytOfMeansOfL1W1.setContentsMargins(0, 0, 0, 0)
 
         # create first mean
-        self.Taom1W1 = qtw.QPushButton(self.WindForFirstMealOfL1W1)
-        self.Taom1W1.setGeometry(20, 50, 125, 175)
-        self.Taom1W1.setStyleSheet("""background-color: green;
+        self.Taom1L1W1 = qtw.QPushButton(self.WindForFirstMealOfL1W1)
+        self.Taom1L1W1.setGeometry(20, 10, 125, 175)
+        self.Taom1L1W1.setStyleSheet("""
                                     background-position: center;
                                     background-image: url("C:/Users/user/Desktop/MANU of Restaurants/Lavash.png");
                                     border-top-left-radius: 30px;
@@ -121,6 +121,51 @@ class Manu(qtw.QMainWindow):
                                     border-bottom-left-radius: 30px;
                                     border-bottom-right-radius: 30px;
                                     """)
+        
+        self.Taom1L1W1Name = qtw.QLabel("Mol go'shili\nLavash", self.Taom1L1W1)
+        self.Taom1L1W1Name.setStyleSheet("color: black;")
+        self.Taom1L1W1Name.setGeometry(20, 90, 100, 50)
+        self.Taom1L1W1Name.setFont(qtg.QFont("Calibri", 10, weight=100))
+
+        self.MinutT1L1W1 = qtw.QPushButton("-", self.WindForFirstMealOfL1W1)
+        self.MinutT1L1W1.setGeometry(20, 155, 20, 30)
+        self.MinutT1L1W1.setStyleSheet("""background-color: green;
+            color: white;
+            border-top-left-radius: 0px;
+            border-top-right-radius: 0px;
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 0px;""")
+        self.MinutT1L1W1.setFont(qtg.QFont("Calobri", 10, weight=100))
+
+        self.ShowerNumberT1L1W1 = qtw.QLabel('<div align="center">0</div>', self.WindForFirstMealOfL1W1)
+        self.ShowerNumberT1L1W1.setGeometry(40, 155, 20, 30)
+        self.ShowerNumberT1L1W1.setStyleSheet("""background-color: green;
+            color: white;
+            """)
+        self.ShowerNumberT1L1W1.setFont(qtg.QFont("Calobri", 9, weight=100))
+
+        
+        self.PulisT1L1W1 = qtw.QPushButton("+", self.WindForFirstMealOfL1W1)
+        self.PulisT1L1W1.setGeometry(60, 155, 20, 30)
+        self.PulisT1L1W1.setStyleSheet("""background-color: green;
+            color: white;
+            border-top-left-radius: 0px;
+            border-top-right-radius: 20px;
+            border-bottom-left-radius: 0px;
+            border-bottom-right-radius: 0px;""")
+        self.PulisT1L1W1.setFont(qtg.QFont("Calobri", 10, weight=100))
+
+        self.Taom1L1W1Price = qtw.QLabel("124 000", self.WindForFirstMealOfL1W1)
+        self.Taom1L1W1Price.setGeometry(85, 155, 50, 30)
+        self.Taom1L1W1Price.setFont(qtg.QFont("Calibri", 9, weight=100))
+        self.Taom1L1W1Price.setStyleSheet("""
+            background-color: white;
+            color: black;
+            border-top-left-radius: 0px;
+            border-top-right-radius: 0px;
+            border-bottom-left-radius: 0px;
+            border-bottom-right-radius: 30px;
+                                        """)
 
         self.LaytOfMeansOfL1W1.addWidget(self.WindForFirstMealOfL1W1)
 
@@ -128,57 +173,6 @@ class Manu(qtw.QMainWindow):
         
         self.MainLayoutOfWindowOne.addWidget(self.Oyna2OfW1)
         
-        self.Oyna3OfW1 = qtw.QWidget(self.Window1)
-        self.Oyna3OfW1.setStyleSheet("background-color: white")
-
-        self.MainLayoutOfWindowOne.addWidget(self.Oyna3OfW1)
-
-        # self.Taom1W1Name = qtw.QLabel("Mol go'shili\nLavash", self.Taom1W1)
-        # self.Taom1W1Name.setStyleSheet("color: black;")
-        # self.Taom1W1Name.setGeometry(20, 90, 100, 50)
-        # self.Taom1W1Name.setFont(qtg.QFont("Calibri", 10, weight=100))
-
-        # self.MinutT1W1 = qtw.QPushButton("-", self.Window1)
-        # self.MinutT1W1.setGeometry(20, 195, 20, 30)
-        # self.MinutT1W1.setStyleSheet("""background-color: green;
-        #     color: white;
-        #     border-top-left-radius: 0px;
-        #     border-top-right-radius: 0px;
-        #     border-bottom-left-radius: 20px;
-        #     border-bottom-right-radius: 0px;""")
-        # self.MinutT1W1.setFont(qtg.QFont("Calobri", 10, weight=100))
-
-        # self.ShowerNumberT1W1 = qtw.QLabel('<div align="center">0</div>', self.Window1)
-        # self.ShowerNumberT1W1.setGeometry(40, 195, 20, 30)
-        # self.ShowerNumberT1W1.setStyleSheet("""background-color: green;
-        #     color: white;
-        #     """)
-        # self.ShowerNumberT1W1.setFont(qtg.QFont("Calobri", 9, weight=100))
-
-        
-        # self.PulisT1W1 = qtw.QPushButton("+", self.Window1)
-        # self.PulisT1W1.setGeometry(60, 195, 20, 30)
-        # self.PulisT1W1.setStyleSheet("""background-color: green;
-        #     color: white;
-        #     border-top-left-radius: 0px;
-        #     border-top-right-radius: 20px;
-        #     border-bottom-left-radius: 0px;
-        #     border-bottom-right-radius: 0px;""")
-        # self.PulisT1W1.setFont(qtg.QFont("Calobri", 10, weight=100))
-
-        # self.Taom1W1Price = qtw.QLabel("124 000", self.Window1)
-        # self.Taom1W1Price.setGeometry(85, 195, 50, 30)
-        # self.Taom1W1Price.setFont(qtg.QFont("Calibri", 9, weight=100))
-        # self.Taom1W1Price.setStyleSheet("""
-        #     background-color: white;
-        #     color: black;
-        #     border-top-left-radius: 0px;
-        #     border-top-right-radius: 0px;
-        #     border-bottom-left-radius: 0px;
-        #     border-bottom-right-radius: 30px;
-        #                                 """)
-
-
 
 
     def PulisMinusT1W1(self):
@@ -198,7 +192,7 @@ class Manu(qtw.QMainWindow):
 
         # self.layOut1W1 = qtw.QVBoxLayout()
         # self.Window1.setLayout(self.layOut1W1)
-        self.Window3.setGeometry(10, 490, 905, 460)
+        self.Window3.setGeometry(20, 480, 905, 430)
         # self.Window1.setMaximumSize(600, 500)
         # self.Window1.setMinimumSize(600, 500)
         self.Window3.setStyleSheet("background-color: #1C317A; border-radius: 50px")
