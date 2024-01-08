@@ -1,9 +1,14 @@
 import PyQt5.QtWidgets as qtw
 import PyQt5.QtCore as qtc
 import PyQt5.QtGui as qtg
+from FuncsOfItmsOfW5 import *
 
-class Meal1L1W1(qtw.QWidget):
+class Meal1L1W1(qtw.QWidget, FunctionsOfItemsOfW5):
     def __init__(self):
+        super().__init__()
+
+        qtw.QWidget.__init__(self)
+
         # Initialize properties
         self.WindForFirstMealOfL1W1 = None
         self.Taom1L1W1 = None

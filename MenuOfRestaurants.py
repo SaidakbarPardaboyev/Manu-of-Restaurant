@@ -4,8 +4,9 @@ import PyQt5.QtGui as qtg
 from FastFood import *
 from meal1L1W1 import *
 from ItmOfW5 import *
+from FuncsOfItmsOfW5 import *
 
-class Manu(qtw.QMainWindow, FastFood, Meal1L1W1, ItemsOfW5):
+class Manu(qtw.QMainWindow, FastFood, Meal1L1W1, ItemsOfW5, FunctionsOfItemsOfW5):
     def __init__(self):
         super().__init__()
 
@@ -46,6 +47,11 @@ class Manu(qtw.QMainWindow, FastFood, Meal1L1W1, ItemsOfW5):
 
         # Show the app
         self.show()
+        
+        # Initialize the components from the inherited classes
+        FastFood.__init__(self)
+        Meal1L1W1.__init__(self)
+        ItemsOfW5.__init__(self)
 
         # all Properties
         # self.layOut1W1 = None
@@ -84,6 +90,10 @@ class Manu(qtw.QMainWindow, FastFood, Meal1L1W1, ItemsOfW5):
         self.LaytOfMeansOfL1W1.setContentsMargins(0, 0, 0, 0)
 
         self.ShMeal1L1W1()
+
+        self.tem = None
+        self.tem = self.PulisT1L1W1.clicked.connect(self.AddToSum(124000, self.SumLabel.text()))
+        self.SumLabel.setText(self.tem)
 
         # Adding the window to the main layout
         self.MainLayoutOfWindowOne.addWidget(self.Oyna2OfW1)

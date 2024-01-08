@@ -6,7 +6,7 @@ class ItemsOfW5(qtw.QWidget):
     def __init__(self):
         self.CountOfMealsOrdered = None
         self.OrderButton = None
-        self.ShoSum = None
+        self.SumLabel = None
 
     def ShItemsOfW5(self):
         # Creating Label for counting the number of the ordered meals
@@ -32,15 +32,15 @@ class ItemsOfW5(qtw.QWidget):
         self.MainLayoutOfWindowFive.addWidget(self.OrderButton)
 
         # Creating a label for showing the price of all the ordered meals
-        self.ShoSum = qtw.QLabel('<div align="center"> 155 000 som</div>')
-        self.ShoSum.setStyleSheet("""
+        self.SumLabel = qtw.QLabel('<div align="center"> 155 000 som</div>')
+        self.SumLabel.setStyleSheet("""
                                                 background-color: white;
                                                 color: black;
                                                 background-position: center;
                                                 """)
-        self.ShoSum.setFont(qtg.QFont("Montserrot", 20, weight=80))
+        self.SumLabel.setFont(qtg.QFont("Montserrot", 20, weight=80))
 
-        self.MainLayoutOfWindowFive.addWidget(self.ShoSum)
+        self.MainLayoutOfWindowFive.addWidget(self.SumLabel)
 
 
         
