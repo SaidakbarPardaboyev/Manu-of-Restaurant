@@ -5,7 +5,7 @@ import PyQt5.QtGui as qtg
 class ItemsOfW5(qtw.QWidget):
     def __init__(self):
         self.CountOfMealsOrdered = None
-        self.OrderButton = qtw.QPushButton("Buyurtma berish")
+        self.OrderButton = None
         self.SumLabel = None
         self.VariForAddSumma = None
         self.responce = None
@@ -24,6 +24,7 @@ class ItemsOfW5(qtw.QWidget):
         self.MainLayoutOfWindowFive.addWidget(self.CountOfMealsOrdered)
 
         # Creating A button to order meals
+        self.OrderButton = qtw.QPushButton("Buyurtma berish", clicked= self.MesBoxForOrder)
         self.OrderButton.setStyleSheet("""
                                         background-color: white;
                                         color: black;
@@ -57,6 +58,3 @@ class ItemsOfW5(qtw.QWidget):
             MesBox.setDefaultButton(qtw.QMessageBox.Ok)
 
             self.responce = MesBox.exec_()
-
-            if self.response == qtw.QMessageBox.Ok:
-                self.close()
